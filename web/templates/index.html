@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan JavaScript File</title>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-card text-card-foreground p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-3xl font-bold mb-4">Scan JavaScript File</h1>
+        <p class="text-muted-foreground mb-6">Enter a URL to scan a JavaScript file for issues.</p>
+        
+        <form id="scanForm" class="mb-6">
+            <div class="flex">
+                <input type="text" id="urlInput" placeholder="Enter JavaScript file URL" class="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                <button type="submit" class="bg-primary text-primary-foreground px-4 py-2 rounded-r-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary">Scan</button>
+            </div>
+        </form>
+        
+        <div id="scanStatus" class="text-muted-foreground">Scan status: <span id="statusText">Pending</span></div>
+        
+        <div id="results" class="hidden mt-6">
+            <h2 class="text-xl font-semibold mb-2">Scan Results:</h2>
+            <pre id="resultsContent" class="bg-muted p-4 rounded overflow-x-auto text-sm"></pre>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
